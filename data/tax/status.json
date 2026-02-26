@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "IRS guidance, Congressional legislation tracker, tax court dockets",
+    "note": "Edit to update signal statuses. Push to trigger rebuild."
+  },
+  "current_friction": "high",
+  "friction_label": "Every USDC-to-USD conversion is a taxable event",
+  "signals": [
+    { "signal": "IRS treats regulated stablecoins as cash equivalent", "status": "pending", "impact": "Eliminates tax friction for conversions", "note": "No IRS guidance issued. GENIUS Act does not address tax treatment." },
+    { "signal": "Legislation exempting USDC-USD from capital gains", "status": "pending", "impact": "Legal interchangeability", "note": "No bill introduced as of Feb 2026" },
+    { "signal": "De minimis exemption for stablecoin transactions", "status": "pending", "impact": "Practical spending enablement", "note": "A $200 de minimis exemption for crypto was proposed in prior sessions but not enacted" },
+    { "signal": "IRS accepts stablecoin for tax payments", "status": "pending", "impact": "Government legitimacy signal", "note": "No indication this is being considered" }
+  ],
+  "timeline": [
+    { "date": "2014-03", "event": "IRS Notice 2014-21: Virtual currency is property for tax purposes", "impact": "All crypto transactions including stablecoin conversions are taxable events" },
+    { "date": "2019-10", "event": "IRS Revenue Ruling 2019-24: Hard forks and airdrops are taxable income", "impact": "Reinforced property treatment of all digital assets" },
+    { "date": "2021-11", "event": "Infrastructure Investment and Jobs Act: crypto broker reporting requirements", "impact": "1099 reporting required for crypto transactions starting 2025" },
+    { "date": "2023-12", "event": "IRS finalizes digital asset broker reporting rules", "impact": "Exchanges must report stablecoin transactions on Form 1099-DA" },
+    { "date": "2025-01", "event": "Form 1099-DA reporting begins for 2025 tax year", "impact": "Every stablecoin conversion now reported to IRS" },
+    { "date": "2025-07", "event": "GENIUS Act signed — does NOT address tax treatment", "impact": "Regulatory clarity for issuers but tax friction remains for users" }
+  ],
+  "note": "Tax treatment is potentially the single most important signal. You can have merchant acceptance, payroll, and bank custody — but if every USDC-to-USD conversion triggers a Form 8949 entry, mass consumer adoption is blocked."
+}

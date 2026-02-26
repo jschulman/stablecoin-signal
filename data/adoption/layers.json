@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Manual curation from news, product announcements, regulatory filings",
+    "note": "Edit layer statuses and add events. Push to trigger rebuild."
+  },
+  "layers": [
+    {
+      "number": 1,
+      "name": "Hold",
+      "status": "emerging",
+      "key_signal": "Banks offering stablecoin custody",
+      "threshold": "3+ top-25 US banks offer USDC accounts",
+      "evidence": "GENIUS Act signed July 2025. FDIC proposed rulemaking for bank-issued stablecoins Feb 2026. Crypto-native platforms (Coinbase, Anchorage) offer custody. Traditional banks not yet live with consumer stablecoin accounts."
+    },
+    {
+      "number": 2,
+      "name": "Earn",
+      "status": "emerging",
+      "key_signal": "Payroll in stablecoins",
+      "threshold": "Major payroll platform offers stablecoin disbursement",
+      "evidence": "Deel offers USDC payroll for international contractors. Request Finance enables crypto payroll. No major US payroll platform (ADP, Gusto) offers it to domestic W-2 employees yet."
+    },
+    {
+      "number": 3,
+      "name": "Spend",
+      "status": "emerging",
+      "key_signal": "Merchant acceptance",
+      "threshold": "Top-20 US retailer accepts stablecoin natively",
+      "evidence": "Stripe re-enabled stablecoin payments Oct 2024. Shopify accepts USDC via plugins. Visa settling with USDC on Solana. No major retailer accepts directly without payment processor conversion."
+    },
+    {
+      "number": 4,
+      "name": "Borrow",
+      "status": "not_started",
+      "key_signal": "Lending equivalence",
+      "threshold": "Bank treats USDC as USD-equivalent collateral",
+      "evidence": "DeFi lending (Aave, Compound) treats stablecoins as near-equivalent. No US bank offers USD-equivalent lending against stablecoin collateral."
+    },
+    {
+      "number": 5,
+      "name": "Invisible",
+      "status": "not_started",
+      "key_signal": "Abstraction complete",
+      "threshold": "Consumer surveys show <50% know which currency they used",
+      "evidence": "No evidence of abstraction. Users always know whether they are using stablecoins vs. USD."
+    }
+  ],
+  "canary": {
+    "name": "Payroll",
+    "description": "When a major US payroll platform allows employers to pay in stablecoins and employees to spend without converting, the off-ramp has started dissolving.",
+    "status": "not_triggered",
+    "watch": ["ADP", "Gusto", "Deel", "Rippling", "Paychex"]
+  },
+  "secondary_canaries": [
+    { "name": "Tax equivalence", "signal": "IRS treats regulated stablecoins as cash equivalents", "status": "not_triggered" },
+    { "name": "Stablecoin > Western Union", "signal": "Cross-border remittance displacement proven", "status": "triggered", "date": "2025-Q3" },
+    { "name": "1% of ACH", "signal": "Commercial payment rail competition is real", "status": "triggered", "date": "2024-12" },
+    { "name": "Top-25 bank custody", "signal": "Traditional financial system has absorbed stablecoins", "status": "not_triggered" }
+  ],
+  "events": [
+    { "date": "2023-09-07", "layer": 3, "event": "Visa begins settling with USDC on Solana", "source": "Visa blog", "significance": "high" },
+    { "date": "2024-04-29", "layer": 3, "event": "Stripe announces stablecoin payment support (USDC)", "source": "Stripe blog", "significance": "high" },
+    { "date": "2024-10-09", "layer": 3, "event": "Stripe re-enables crypto payments, adds USDC on multiple chains", "source": "TechCrunch", "significance": "high" },
+    { "date": "2024-10-22", "layer": 3, "event": "PayPal enables PYUSD-to-USD merchant settlement", "source": "PayPal newsroom", "significance": "medium" },
+    { "date": "2024-11-05", "layer": 1, "event": "US election results signal pro-crypto regulatory shift", "source": "Multiple", "significance": "high" },
+    { "date": "2025-02-04", "layer": 1, "event": "OCC confirms national banks can custody stablecoins", "source": "OCC Interpretive Letter", "significance": "high" },
+    { "date": "2025-04-15", "layer": 2, "event": "Deel launches USDC payroll for US contractors", "source": "Deel blog", "significance": "medium" },
+    { "date": "2025-07-18", "layer": 1, "event": "GENIUS Act signed into law by President", "source": "Congress.gov", "significance": "critical" },
+    { "date": "2025-08-12", "layer": 3, "event": "Shopify natively integrates USDC checkout for US merchants", "source": "Shopify changelog", "significance": "high" },
+    { "date": "2025-10-01", "layer": 1, "event": "JPMorgan announces stablecoin custody pilot for institutional clients", "source": "WSJ", "significance": "high" },
+    { "date": "2025-11-15", "layer": 3, "event": "Square enables USDC acceptance at point of sale terminals", "source": "Block Inc press release", "significance": "high" },
+    { "date": "2026-01-15", "layer": 1, "event": "FDIC issues proposed rulemaking for bank-issued stablecoins", "source": "Federal Register", "significance": "high" },
+    { "date": "2026-02-10", "layer": 2, "event": "Rippling announces stablecoin payroll beta for US companies", "source": "Rippling blog", "significance": "high" }
+  ]
+}

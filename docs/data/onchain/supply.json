@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "DefiLlama Stablecoins API, FRED M1SL series",
+    "note": "Supply in USD billions. M1 in USD trillions. Edit to add manual corrections. Push to trigger rebuild."
+  },
+  "monthly": [
+    { "date": "2024-03", "usdc": 32.4, "usdt": 104.0, "others": 8.3, "total": 144.7, "m1_trillion": 17.94, "pct_of_m1": 0.81 },
+    { "date": "2024-04", "usdc": 33.1, "usdt": 110.3, "others": 8.5, "total": 151.9, "m1_trillion": 17.97, "pct_of_m1": 0.85 },
+    { "date": "2024-05", "usdc": 32.8, "usdt": 111.8, "others": 8.7, "total": 153.3, "m1_trillion": 18.01, "pct_of_m1": 0.85 },
+    { "date": "2024-06", "usdc": 33.5, "usdt": 112.6, "others": 9.0, "total": 155.1, "m1_trillion": 18.06, "pct_of_m1": 0.86 },
+    { "date": "2024-07", "usdc": 33.9, "usdt": 114.2, "others": 9.2, "total": 157.3, "m1_trillion": 18.10, "pct_of_m1": 0.87 },
+    { "date": "2024-08", "usdc": 34.7, "usdt": 117.9, "others": 9.5, "total": 162.1, "m1_trillion": 18.13, "pct_of_m1": 0.89 },
+    { "date": "2024-09", "usdc": 35.6, "usdt": 119.4, "others": 9.8, "total": 164.8, "m1_trillion": 18.15, "pct_of_m1": 0.91 },
+    { "date": "2024-10", "usdc": 36.3, "usdt": 120.5, "others": 10.1, "total": 166.9, "m1_trillion": 18.19, "pct_of_m1": 0.92 },
+    { "date": "2024-11", "usdc": 38.7, "usdt": 132.9, "others": 10.8, "total": 182.4, "m1_trillion": 18.22, "pct_of_m1": 1.00 },
+    { "date": "2024-12", "usdc": 43.7, "usdt": 138.5, "others": 12.0, "total": 194.2, "m1_trillion": 18.25, "pct_of_m1": 1.06 },
+    { "date": "2025-01", "usdc": 45.2, "usdt": 140.1, "others": 12.5, "total": 197.8, "m1_trillion": 18.28, "pct_of_m1": 1.08 },
+    { "date": "2025-02", "usdc": 47.8, "usdt": 141.3, "others": 12.9, "total": 202.0, "m1_trillion": 18.31, "pct_of_m1": 1.10 },
+    { "date": "2025-03", "usdc": 49.5, "usdt": 144.2, "others": 13.4, "total": 207.1, "m1_trillion": 18.35, "pct_of_m1": 1.13 },
+    { "date": "2025-04", "usdc": 51.0, "usdt": 148.5, "others": 14.0, "total": 213.5, "m1_trillion": 18.38, "pct_of_m1": 1.16 },
+    { "date": "2025-05", "usdc": 53.2, "usdt": 151.0, "others": 14.5, "total": 218.7, "m1_trillion": 18.40, "pct_of_m1": 1.19 },
+    { "date": "2025-06", "usdc": 55.8, "usdt": 153.4, "others": 15.0, "total": 224.2, "m1_trillion": 18.42, "pct_of_m1": 1.22 },
+    { "date": "2025-07", "usdc": 57.5, "usdt": 155.0, "others": 15.5, "total": 228.0, "m1_trillion": 18.45, "pct_of_m1": 1.24 },
+    { "date": "2025-08", "usdc": 59.0, "usdt": 157.2, "others": 16.0, "total": 232.2, "m1_trillion": 18.48, "pct_of_m1": 1.26 },
+    { "date": "2025-09", "usdc": 60.5, "usdt": 158.8, "others": 16.5, "total": 235.8, "m1_trillion": 18.50, "pct_of_m1": 1.27 },
+    { "date": "2025-10", "usdc": 62.0, "usdt": 160.5, "others": 17.0, "total": 239.5, "m1_trillion": 18.52, "pct_of_m1": 1.29 },
+    { "date": "2025-11", "usdc": 63.5, "usdt": 162.0, "others": 17.5, "total": 243.0, "m1_trillion": 18.55, "pct_of_m1": 1.31 },
+    { "date": "2025-12", "usdc": 65.0, "usdt": 164.0, "others": 18.0, "total": 247.0, "m1_trillion": 18.58, "pct_of_m1": 1.33 },
+    { "date": "2026-01", "usdc": 66.5, "usdt": 166.0, "others": 18.5, "total": 251.0, "m1_trillion": 18.60, "pct_of_m1": 1.35 },
+    { "date": "2026-02", "usdc": 68.0, "usdt": 168.0, "others": 19.0, "total": 255.0, "m1_trillion": 18.62, "pct_of_m1": 1.37 }
+  ],
+  "milestones": [
+    { "threshold": "1% of M1", "target_bn": 180, "status": "passed", "date": "2024-11", "note": "Structurally noticeable" },
+    { "threshold": "2% of M1", "target_bn": 360, "status": "pending", "note": "Material monetary instrument" },
+    { "threshold": "5% of M1", "target_bn": 900, "status": "pending", "note": "Systemically significant" },
+    { "threshold": "10% of M1", "target_bn": 1800, "status": "pending", "note": "Parallel monetary system" }
+  ]
+}

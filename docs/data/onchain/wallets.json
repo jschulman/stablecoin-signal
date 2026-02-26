@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "DefiLlama, Dune Analytics community dashboards, exchange reports",
+    "note": "Wallet counts are approximate. US attribution estimated from exchange jurisdiction data. Edit to correct. Push to trigger rebuild."
+  },
+  "monthly": [
+    { "date": "2024-03", "total_wallets_m": 120.5, "monthly_active_m": 28.5, "new_wallets_k": 3200, "habitual_pct": 6.2, "median_balance": 185 },
+    { "date": "2024-06", "total_wallets_m": 135.0, "monthly_active_m": 32.0, "new_wallets_k": 3800, "habitual_pct": 6.8, "median_balance": 170 },
+    { "date": "2024-09", "total_wallets_m": 152.0, "monthly_active_m": 37.5, "new_wallets_k": 4500, "habitual_pct": 7.5, "median_balance": 155 },
+    { "date": "2024-12", "total_wallets_m": 170.0, "monthly_active_m": 42.0, "new_wallets_k": 5200, "habitual_pct": 8.2, "median_balance": 142 },
+    { "date": "2025-03", "total_wallets_m": 185.0, "monthly_active_m": 48.0, "new_wallets_k": 5800, "habitual_pct": 8.8, "median_balance": 130 },
+    { "date": "2025-06", "total_wallets_m": 200.0, "monthly_active_m": 55.0, "new_wallets_k": 6500, "habitual_pct": 9.5, "median_balance": 118 },
+    { "date": "2025-09", "total_wallets_m": 218.0, "monthly_active_m": 62.0, "new_wallets_k": 7200, "habitual_pct": 10.1, "median_balance": 108 },
+    { "date": "2025-12", "total_wallets_m": 235.0, "monthly_active_m": 68.0, "new_wallets_k": 7800, "habitual_pct": 10.8, "median_balance": 98 },
+    { "date": "2026-02", "total_wallets_m": 248.0, "monthly_active_m": 72.0, "new_wallets_k": 8200, "habitual_pct": 11.2, "median_balance": 92 }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Platform websites, earnings calls, DeFi rate aggregators",
+    "note": "GENIUS Act prohibits issuers from paying yield directly. Platforms and DeFi protocols can. Edit to update rates."
+  },
+  "fed_funds_rate": 4.25,
+  "current": [
+    { "platform": "Coinbase", "asset": "USDC", "apy_pct": 4.1, "type": "custodial", "note": "Rewards program for USDC holders" },
+    { "platform": "Robinhood", "asset": "USDC", "apy_pct": 3.75, "type": "custodial", "note": "Gold members only" },
+    { "platform": "Aave v3", "asset": "USDC", "apy_pct": 5.2, "type": "defi_lending", "note": "Variable rate, on-chain" },
+    { "platform": "Compound v3", "asset": "USDC", "apy_pct": 4.8, "type": "defi_lending", "note": "Variable rate, on-chain" },
+    { "platform": "Maker DSR", "asset": "DAI", "apy_pct": 5.0, "type": "defi_savings", "note": "DAI Savings Rate, governance-set" },
+    { "platform": "PayPal", "asset": "PYUSD", "apy_pct": 3.7, "type": "custodial", "note": "Select users" },
+    { "platform": "Nexo", "asset": "USDC", "apy_pct": 6.0, "type": "cefi_lending", "note": "Tiered by loyalty level" },
+    { "platform": "BlockFi (successor)", "asset": "USDC", "apy_pct": 4.5, "type": "cefi_lending", "note": "Post-restructuring platform" }
+  ],
+  "note": "Stablecoin yields above the Fed funds rate indicate lending demand exceeding supply — an adoption signal. Yields converging to Fed funds rate indicate commoditization."
+}

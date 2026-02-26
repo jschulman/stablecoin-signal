@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Congress.gov, Federal Register, OCC.gov, FDIC.gov, Treasury.gov",
+    "note": "Edit to update milestone statuses. Push to trigger rebuild."
+  },
+  "act_name": "GENIUS Act (Guiding and Establishing National Innovation for US Stablecoins)",
+  "signed_date": "2025-07-18",
+  "effective_date_estimate": "2027-01-18",
+  "milestones": [
+    { "milestone": "GENIUS Act signed into law", "deadline": "2025-07-18", "status": "done", "agency": "Congress", "detail": "Bipartisan passage, signed by President" },
+    { "milestone": "FDIC proposed rulemaking for bank stablecoin issuance", "deadline": null, "status": "done", "agency": "FDIC", "detail": "Proposed February 2026, comment period open" },
+    { "milestone": "OCC guidance on national bank stablecoin activities", "deadline": null, "status": "done", "agency": "OCC", "detail": "Interpretive letters confirm custody and issuance" },
+    { "milestone": "Final regulations issued by federal agencies", "deadline": "2026-11", "status": "in_progress", "agency": "OCC/FDIC/Fed", "detail": "Expected by November 2026 (18 months post-enactment)" },
+    { "milestone": "Effective date of Act", "deadline": "2027-01-18", "status": "pending", "agency": "All", "detail": "18 months post-enactment or 120 days after final regs, whichever is earlier" },
+    { "milestone": "Foreign issuer compatibility determinations", "deadline": "2026-07-18", "status": "pending", "agency": "Treasury", "detail": "Treasury Secretary determines which foreign stablecoin regimes are compatible" },
+    { "milestone": "First GENIUS Act-approved payment stablecoin issuer", "deadline": null, "status": "pending", "agency": "OCC/FDIC", "detail": "Awaiting final regulations" },
+    { "milestone": "State regulatory certification of substantial similarity", "deadline": "2028-01-18", "status": "pending", "agency": "States", "detail": "1 year post-effective date for state regimes to certify" },
+    { "milestone": "Prohibition on non-approved issuers takes effect", "deadline": "2028-07-18", "status": "pending", "agency": "All", "detail": "3 years post-enactment, only approved issuers may operate" }
+  ],
+  "approved_issuers": [],
+  "rulemaking_tracker": [
+    { "agency": "FDIC", "stage": "proposed", "published": "2026-01-15", "comment_deadline": "2026-04-15", "final_expected": "2026-09" },
+    { "agency": "OCC", "stage": "interpretive_letters", "published": "2025-02-04", "next_action": "Formal rulemaking expected 2026-Q2" },
+    { "agency": "Federal Reserve", "stage": "pending", "published": null, "next_action": "Expected to issue proposed rule 2026-Q1" }
+  ]
+}

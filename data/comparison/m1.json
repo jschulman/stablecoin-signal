@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Derived from supply.json (mock mode)",
+    "series_id": "M1SL",
+    "unit": "USD trillions",
+    "frequency": "monthly",
+    "note": "M1 includes currency in circulation, demand deposits, and other liquid deposits."
+  },
+  "observations": [
+    {
+      "date": "2024-03",
+      "value_trillion": 17.94
+    },
+    {
+      "date": "2024-04",
+      "value_trillion": 17.97
+    },
+    {
+      "date": "2024-05",
+      "value_trillion": 18.01
+    },
+    {
+      "date": "2024-06",
+      "value_trillion": 18.06
+    },
+    {
+      "date": "2024-07",
+      "value_trillion": 18.1
+    },
+    {
+      "date": "2024-08",
+      "value_trillion": 18.13
+    },
+    {
+      "date": "2024-09",
+      "value_trillion": 18.15
+    },
+    {
+      "date": "2024-10",
+      "value_trillion": 18.19
+    },
+    {
+      "date": "2024-11",
+      "value_trillion": 18.22
+    },
+    {
+      "date": "2024-12",
+      "value_trillion": 18.25
+    },
+    {
+      "date": "2025-01",
+      "value_trillion": 18.28
+    },
+    {
+      "date": "2025-02",
+      "value_trillion": 18.31
+    },
+    {
+      "date": "2025-03",
+      "value_trillion": 18.35
+    },
+    {
+      "date": "2025-04",
+      "value_trillion": 18.38
+    },
+    {
+      "date": "2025-05",
+      "value_trillion": 18.4
+    },
+    {
+      "date": "2025-06",
+      "value_trillion": 18.42
+    },
+    {
+      "date": "2025-07",
+      "value_trillion": 18.45
+    },
+    {
+      "date": "2025-08",
+      "value_trillion": 18.48
+    },
+    {
+      "date": "2025-09",
+      "value_trillion": 18.5
+    },
+    {
+      "date": "2025-10",
+      "value_trillion": 18.52
+    },
+    {
+      "date": "2025-11",
+      "value_trillion": 18.55
+    },
+    {
+      "date": "2025-12",
+      "value_trillion": 18.58
+    },
+    {
+      "date": "2026-01",
+      "value_trillion": 18.6
+    },
+    {
+      "date": "2026-02",
+      "value_trillion": 18.62
+    }
+  ]
+}

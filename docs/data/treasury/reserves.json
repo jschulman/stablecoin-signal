@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Circle transparency reports, Tether attestations, Treasury.gov outstanding T-bills",
+    "note": "Curated from monthly/quarterly issuer reports. Edit to add new data. Push to trigger rebuild."
+  },
+  "monthly": [
+    { "date": "2024-03", "circle_tbill_bn": 28.4, "tether_tbill_bn": 81.0, "other_bn": 3.0, "total_stablecoin_tbill_bn": 112.4, "total_tbill_market_tn": 5.80, "pct_of_market": 1.94 },
+    { "date": "2024-06", "circle_tbill_bn": 29.8, "tether_tbill_bn": 84.5, "other_bn": 3.5, "total_stablecoin_tbill_bn": 117.8, "total_tbill_market_tn": 5.95, "pct_of_market": 1.98 },
+    { "date": "2024-09", "circle_tbill_bn": 32.5, "tether_tbill_bn": 89.0, "other_bn": 4.0, "total_stablecoin_tbill_bn": 125.5, "total_tbill_market_tn": 6.10, "pct_of_market": 2.06 },
+    { "date": "2024-12", "circle_tbill_bn": 38.0, "tether_tbill_bn": 95.5, "other_bn": 5.0, "total_stablecoin_tbill_bn": 138.5, "total_tbill_market_tn": 6.25, "pct_of_market": 2.22 },
+    { "date": "2025-03", "circle_tbill_bn": 42.0, "tether_tbill_bn": 100.0, "other_bn": 5.5, "total_stablecoin_tbill_bn": 147.5, "total_tbill_market_tn": 6.35, "pct_of_market": 2.32 },
+    { "date": "2025-06", "circle_tbill_bn": 47.0, "tether_tbill_bn": 106.0, "other_bn": 6.5, "total_stablecoin_tbill_bn": 159.5, "total_tbill_market_tn": 6.45, "pct_of_market": 2.47 },
+    { "date": "2025-09", "circle_tbill_bn": 51.0, "tether_tbill_bn": 110.0, "other_bn": 7.0, "total_stablecoin_tbill_bn": 168.0, "total_tbill_market_tn": 6.55, "pct_of_market": 2.56 },
+    { "date": "2025-12", "circle_tbill_bn": 55.0, "tether_tbill_bn": 115.0, "other_bn": 8.0, "total_stablecoin_tbill_bn": 178.0, "total_tbill_market_tn": 6.65, "pct_of_market": 2.68 },
+    { "date": "2026-02", "circle_tbill_bn": 58.0, "tether_tbill_bn": 118.0, "other_bn": 8.5, "total_stablecoin_tbill_bn": 184.5, "total_tbill_market_tn": 6.70, "pct_of_market": 2.75 }
+  ],
+  "milestones": [
+    { "threshold": "1% of T-bill market", "status": "passed", "date": "2023-06", "note": "Noticeable buyer" },
+    { "threshold": "2% of T-bill market", "status": "passed", "date": "2024-06", "note": "Material market participant" },
+    { "threshold": "5% of T-bill market", "status": "pending", "note": "Too big to fail — government has economic interest in stablecoin success" },
+    { "threshold": "10% of T-bill market", "status": "pending", "note": "Systemic dependence" }
+  ],
+  "context": "Stablecoin issuers are now among the largest holders of short-term US Treasuries, alongside money market funds and foreign central banks. The GENIUS Act requires 1:1 reserves in specified assets, primarily US Treasuries and cash equivalents."
+}

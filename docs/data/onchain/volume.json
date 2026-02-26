@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "Visa Onchain Analytics, Brevan Howard, a16z State of Crypto, Nacha/FedACH",
+    "note": "Gross volume from on-chain data. Commercial estimate filtered per METHODOLOGY.md. ACH from Nacha quarterly reports. All values in USD billions."
+  },
+  "monthly": [
+    { "date": "2024-03", "gross_volume_bn": 1650, "estimated_commercial_bn": 38, "ach_volume_bn": 6300, "commercial_pct_of_ach": 0.60, "avg_transfer_size": 2400, "tx_count_millions": 95 },
+    { "date": "2024-06", "gross_volume_bn": 1880, "estimated_commercial_bn": 45, "ach_volume_bn": 6450, "commercial_pct_of_ach": 0.70, "avg_transfer_size": 2200, "tx_count_millions": 110 },
+    { "date": "2024-09", "gross_volume_bn": 2100, "estimated_commercial_bn": 55, "ach_volume_bn": 6600, "commercial_pct_of_ach": 0.83, "avg_transfer_size": 2050, "tx_count_millions": 128 },
+    { "date": "2024-12", "gross_volume_bn": 2400, "estimated_commercial_bn": 68, "ach_volume_bn": 6750, "commercial_pct_of_ach": 1.01, "avg_transfer_size": 1900, "tx_count_millions": 145 },
+    { "date": "2025-03", "gross_volume_bn": 2600, "estimated_commercial_bn": 78, "ach_volume_bn": 6850, "commercial_pct_of_ach": 1.14, "avg_transfer_size": 1800, "tx_count_millions": 160 },
+    { "date": "2025-06", "gross_volume_bn": 2850, "estimated_commercial_bn": 90, "ach_volume_bn": 6950, "commercial_pct_of_ach": 1.29, "avg_transfer_size": 1700, "tx_count_millions": 178 },
+    { "date": "2025-09", "gross_volume_bn": 3100, "estimated_commercial_bn": 105, "ach_volume_bn": 7050, "commercial_pct_of_ach": 1.49, "avg_transfer_size": 1600, "tx_count_millions": 195 },
+    { "date": "2025-12", "gross_volume_bn": 3400, "estimated_commercial_bn": 120, "ach_volume_bn": 7150, "commercial_pct_of_ach": 1.68, "avg_transfer_size": 1520, "tx_count_millions": 212 },
+    { "date": "2026-02", "gross_volume_bn": 3550, "estimated_commercial_bn": 132, "ach_volume_bn": 7200, "commercial_pct_of_ach": 1.83, "avg_transfer_size": 1480, "tx_count_millions": 225 }
+  ],
+  "defi_volume": [
+    { "date": "2024-03", "defi_bn": 1200, "exchange_bn": 350, "other_bn": 62 },
+    { "date": "2024-06", "defi_bn": 1380, "exchange_bn": 395, "other_bn": 60 },
+    { "date": "2024-09", "defi_bn": 1520, "exchange_bn": 450, "other_bn": 75 },
+    { "date": "2024-12", "defi_bn": 1750, "exchange_bn": 495, "other_bn": 87 },
+    { "date": "2025-06", "defi_bn": 2050, "exchange_bn": 580, "other_bn": 130 },
+    { "date": "2025-12", "defi_bn": 2480, "exchange_bn": 700, "other_bn": 100 },
+    { "date": "2026-02", "defi_bn": 2600, "exchange_bn": 720, "other_bn": 98 }
+  ],
+  "milestones": [
+    { "threshold": "0.1% of ACH", "status": "passed", "date": "2023-06", "note": "Measurable but tiny" },
+    { "threshold": "1% of ACH", "status": "passed", "date": "2024-12", "note": "THE SIGNAL. Settlement rail competition begins." },
+    { "threshold": "5% of ACH", "status": "pending", "note": "Banks and payment processors materially impacted" },
+    { "threshold": "10% of ACH", "status": "pending", "note": "Parallel payment rail established" }
+  ],
+  "filtering_note": "Commercial volume is estimated by excluding known DeFi protocol interactions, exchange-to-exchange transfers, arbitrage activity, and same-entity treasury management. This is a best-effort approximation. See METHODOLOGY.md for full filtering methodology."
+}

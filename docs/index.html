@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Stablecoin Signal</title>
+  <meta name="description" content="Tracking stablecoin adoption through the Interchangeability Ladder. Open data, no tracking.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">The Stablecoin Signal</h1>
+      <p class="site-subtitle">Tracking stablecoin adoption through the Interchangeability Ladder &mdash; from holding to invisible money</p>
+      <p class="last-updated" id="last-updated">Last updated: loading...</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Section 1: The Interchangeability Ladder (HERO) -->
+    <section class="section" id="ladder-section">
+      <h2 class="section-title">The Interchangeability Ladder</h2>
+      <div class="ladder-container" id="ladder-container">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="canary-panel" id="canary-panel">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Section 2: Supply and Scale -->
+    <section class="section" id="supply-section">
+      <h2 class="section-title">Supply &amp; Scale</h2>
+      <div class="chart-grid">
+        <div class="card card-wide">
+          <div class="card-header">
+            <h3 class="card-title">Stablecoin Supply vs M1 Ratio</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper chart-tall">
+              <canvas id="supply-chart"></canvas>
+            </div>
+          </div>
+          <div class="milestone-row" id="supply-milestones"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Commercial Adoption -->
+    <section class="section" id="commercial-section">
+      <h2 class="section-title">Commercial Adoption</h2>
+      <div class="chart-grid chart-grid-2">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Commercial Volume vs ACH</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="commercial-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Commercial % of ACH</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="commercial-pct-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-grid">
+        <div class="card card-wide">
+          <div class="card-header">
+            <h3 class="card-title">Average Transfer Size Trend</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper chart-short">
+              <canvas id="transfer-size-chart"></canvas>
+            </div>
+          </div>
+          <div class="milestone-row" id="volume-milestones"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Cross-Border Remittance -->
+    <section class="section" id="remittance-section">
+      <h2 class="section-title">Cross-Border Remittance</h2>
+      <div class="chart-grid chart-grid-2">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Remittance Volume by Provider</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="remittance-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Cost Comparison: Stablecoin vs Traditional</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="remittance-cost-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="corridor-cards" id="corridor-cards">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Section 5: Acceptance Signals -->
+    <section class="section" id="acceptance-section">
+      <h2 class="section-title">Acceptance Signals</h2>
+      <div class="card card-wide">
+        <div class="card-header">
+          <h3 class="card-title">GENIUS Act Implementation Timeline</h3>
+          <span class="countdown-badge" id="genius-countdown">--</span>
+        </div>
+        <div class="card-body">
+          <div class="timeline-horizontal" id="genius-timeline">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+      <div class="chart-grid chart-grid-2">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Adoption Events</h3>
+          </div>
+          <div class="card-body">
+            <div class="event-list" id="event-list">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Rulemaking Tracker</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-wrapper" id="rulemaking-table">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Deep Metrics -->
+    <section class="section" id="deep-section">
+      <h2 class="section-title">Deep Metrics</h2>
+      <div class="chart-grid chart-grid-2">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Wallet Growth</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="wallet-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Treasury Market Integration</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper">
+              <canvas id="treasury-chart"></canvas>
+            </div>
+          </div>
+          <div class="milestone-row" id="treasury-milestones"></div>
+        </div>
+      </div>
+      <div class="chart-grid chart-grid-3">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Tax Treatment Status</h3>
+          </div>
+          <div class="card-body" id="tax-status-panel">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Yield Comparison</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-wrapper" id="yield-table">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Depeg Events</h3>
+          </div>
+          <div class="card-body">
+            <div class="event-list" id="depeg-list">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Section 7: Footer / Methodology -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-freshness" id="footer-freshness">
+        <!-- Rendered by JS -->
+      </div>
+      <p class="footer-links">
+        <a href="METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a>
+        <span class="footer-sep">|</span>
+        <a href="https://github.com/jschulman/stablecoin-signal" target="_blank" rel="noopener">Fork this project</a>
+      </p>
+      <p class="footer-links">
+        <a href="https://jschulman.github.io/displacement-curve/" target="_blank" rel="noopener">The Displacement Curve</a>
+        <span class="footer-sep">|</span>
+        <a href="https://jschulman.github.io/quantum-qanary/" target="_blank" rel="noopener">The Quantum Qanary</a>
+      </p>
+      <p class="footer-disclaimer">Not investment advice. Data, not opinion. All data is publicly sourced and independently verifiable.</p>
+      <p class="footer-credit">Built by <a href="https://github.com/jschulman" target="_blank" rel="noopener">Jay Schulman</a></p>
+      <p class="footer-privacy">No cookies. No tracking. No login. Just data.</p>
+    </div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

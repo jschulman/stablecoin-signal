@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "last_updated": "2026-02-26",
+    "source": "CoinGecko historical price data, news reports, post-mortem analyses",
+    "note": "Edit to add new depeg events. Push to trigger rebuild."
+  },
+  "events": [
+    { "date": "2022-05-09", "asset": "UST (TerraUSD)", "low_price": 0.00, "duration_days": "permanent", "cause": "Algorithmic stablecoin death spiral — Luna/UST collapse", "recovery": "No recovery. $40B+ wiped out.", "severity": "catastrophic", "systemic_impact": "Triggered industry-wide contagion, regulatory scrutiny" },
+    { "date": "2023-03-11", "asset": "USDC", "low_price": 0.878, "duration_days": 3, "cause": "Silicon Valley Bank collapse — $3.3B of Circle reserves held at SVB", "recovery": "Full peg restored after Fed BTFP backstop and Circle confirmation of reserves", "severity": "major", "systemic_impact": "Temporary contagion to DAI and FRAX. Demonstrated banking concentration risk." },
+    { "date": "2023-03-11", "asset": "DAI", "low_price": 0.897, "duration_days": 2, "cause": "Cascading from USDC depeg — DAI collateral includes significant USDC", "recovery": "Recovered as USDC restored peg", "severity": "moderate", "systemic_impact": "Highlighted DeFi stablecoin dependency chains" },
+    { "date": "2023-06-15", "asset": "USDT", "low_price": 0.996, "duration_days": 1, "cause": "Brief market panic from Curve pool imbalance", "recovery": "Rapid recovery, no fundamental issue", "severity": "minor", "systemic_impact": "Demonstrated Tether market resilience" }
+  ],
+  "note": "Depeg events are tracked as risk signals, not to discourage adoption. A mature financial instrument should have a documented history of stress events and recoveries."
+}
