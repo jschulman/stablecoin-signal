@@ -975,13 +975,9 @@
       });
       indicators.appendChild(dot);
 
-      if (loaded) {
-        var monthly = src.data.monthly || src.data.quarterly || src.data.milestones;
-        if (monthly && monthly.length) {
-          var last = monthly[monthly.length - 1];
-          var d = last.date || last.quarter || last.deadline;
-          if (d && (!latestDate || d > latestDate)) latestDate = d;
-        }
+      if (loaded && src.data.metadata && src.data.metadata.last_updated) {
+        var d = src.data.metadata.last_updated;
+        if (!latestDate || d > latestDate) latestDate = d;
       }
     }
 
