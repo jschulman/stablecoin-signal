@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-02-26",
+    "last_updated": "2026-03-01",
     "computed_by": "normalizers/composite_signal.py"
   },
   "layers_summary": {
@@ -11,7 +11,7 @@
     "invisible": "not_started"
   },
   "key_metrics": {
-    "supply_pct_of_m1": 1.37,
+    "supply_pct_of_m1": 1.61,
     "commercial_pct_of_ach": 1.83,
     "remittance_pct_of_outbound": 14.4,
     "treasury_pct_of_tbills": 2.75,
