@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-02",
     "computed_by": "normalizers/composite_signal.py"
   },
   "layers_summary": {
@@ -17,7 +17,7 @@
     "treasury_pct_of_tbills": 2.75,
     "tax_friction": "high",
     "active_wallets_m": 72.0,
-    "genius_act_days_until_effective": 325
+    "genius_act_days_until_effective": 321
   },
   "canary_status": {
     "payroll": "not_triggered",
