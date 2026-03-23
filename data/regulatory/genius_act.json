@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-03-16",
+    "last_updated": "2026-03-23",
     "source": "Congress.gov, Federal Register, OCC.gov, FDIC.gov, Treasury.gov",
     "note": "Edit to update milestone statuses. Push to trigger rebuild."
   },
@@ -35,7 +35,7 @@
       "status": "in_progress",
       "agency": "OCC/FDIC/Fed",
       "detail": "Expected by November 2026 (18 months post-enactment)",
-      "days_remaining": 229
+      "days_remaining": 222
     },
     {
       "milestone": "Effective date of Act",
@@ -43,7 +43,7 @@
       "status": "pending",
       "agency": "All",
       "detail": "18 months post-enactment or 120 days after final regs, whichever is earlier",
-      "days_remaining": 307
+      "days_remaining": 300
     },
     {
       "milestone": "Foreign issuer compatibility determinations",
@@ -51,7 +51,7 @@
       "status": "pending",
       "agency": "Treasury",
       "detail": "Treasury Secretary determines which foreign stablecoin regimes are compatible",
-      "days_remaining": 123
+      "days_remaining": 116
     },
     {
       "milestone": "First GENIUS Act-approved payment stablecoin issuer",
@@ -66,7 +66,7 @@
       "status": "pending",
       "agency": "States",
       "detail": "1 year post-effective date for state regimes to certify",
-      "days_remaining": 672
+      "days_remaining": 665
     },
     {
       "milestone": "Prohibition on non-approved issuers takes effect",
@@ -74,7 +74,7 @@
       "status": "pending",
       "agency": "All",
       "detail": "3 years post-enactment, only approved issuers may operate",
-      "days_remaining": 854
+      "days_remaining": 847
     }
   ],
   "approved_issuers": [],
@@ -99,5 +99,5 @@
       "next_action": "Expected to issue proposed rule 2026-Q1"
     }
   ],
-  "days_until_effective": 307
+  "days_until_effective": 300
 }
