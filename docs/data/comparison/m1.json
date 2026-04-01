@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-04-01",
     "source": "FRED M1SL series (Federal Reserve Economic Data)",
     "series_id": "M1SL",
     "unit": "USD trillions",
@@ -9,16 +9,12 @@
   },
   "observations": [
     {
-      "date": "2024-02",
-      "value_trillion": 18.02
-    },
-    {
       "date": "2024-03",
-      "value_trillion": 18.02
+      "value_trillion": 18.05
     },
     {
       "date": "2024-04",
-      "value_trillion": 18.01
+      "value_trillion": 18.0
     },
     {
       "date": "2024-05",
@@ -26,15 +22,15 @@
     },
     {
       "date": "2024-06",
-      "value_trillion": 18.07
+      "value_trillion": 18.04
     },
     {
       "date": "2024-07",
-      "value_trillion": 18.06
+      "value_trillion": 18.04
     },
     {
       "date": "2024-08",
-      "value_trillion": 18.11
+      "value_trillion": 18.1
     },
     {
       "date": "2024-09",
@@ -46,47 +42,47 @@
     },
     {
       "date": "2024-11",
-      "value_trillion": 18.34
+      "value_trillion": 18.35
     },
     {
       "date": "2024-12",
-      "value_trillion": 18.38
+      "value_trillion": 18.39
     },
     {
       "date": "2025-01",
-      "value_trillion": 18.45
+      "value_trillion": 18.46
     },
     {
       "date": "2025-02",
-      "value_trillion": 18.5
+      "value_trillion": 18.51
     },
     {
       "date": "2025-03",
-      "value_trillion": 18.53
+      "value_trillion": 18.56
     },
     {
       "date": "2025-04",
-      "value_trillion": 18.64
+      "value_trillion": 18.62
     },
     {
       "date": "2025-05",
-      "value_trillion": 18.67
+      "value_trillion": 18.66
     },
     {
       "date": "2025-06",
-      "value_trillion": 18.77
+      "value_trillion": 18.75
     },
     {
       "date": "2025-07",
-      "value_trillion": 18.82
+      "value_trillion": 18.8
     },
     {
       "date": "2025-08",
-      "value_trillion": 18.85
+      "value_trillion": 18.84
     },
     {
       "date": "2025-09",
-      "value_trillion": 18.91
+      "value_trillion": 18.9
     },
     {
       "date": "2025-10",
@@ -94,15 +90,19 @@
     },
     {
       "date": "2025-11",
-      "value_trillion": 19.01
+      "value_trillion": 19.02
     },
     {
       "date": "2025-12",
-      "value_trillion": 19.09
+      "value_trillion": 19.1
     },
     {
       "date": "2026-01",
-      "value_trillion": 19.19
+      "value_trillion": 19.2
+    },
+    {
+      "date": "2026-02",
+      "value_trillion": 19.4
     }
   ]
 }
