@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-28",
+    "last_updated": "2026-04-29",
     "source": "DefiLlama Stablecoins API, FRED M1SL series",
     "note": "Supply in USD billions. M1 in USD trillions. Edit to add manual corrections. Push to trigger rebuild."
   },
@@ -214,12 +214,12 @@
     },
     {
       "date": "2026-04",
-      "usdc": 77.7,
-      "usdt": 189.7,
-      "others": 52.1,
-      "total": 319.5,
-      "m1_trillion": 19.4,
-      "pct_of_m1": 1.65
+      "usdc": 77.6,
+      "usdt": 189.6,
+      "others": 52.4,
+      "total": 319.6,
+      "m1_trillion": 19.44,
+      "pct_of_m1": 1.64
     }
   ],
   "milestones": [
@@ -232,19 +232,19 @@
     },
     {
       "threshold": "2% of M1",
-      "target_bn": 388,
+      "target_bn": 389,
       "status": "pending",
       "note": "Material monetary instrument"
     },
     {
       "threshold": "5% of M1",
-      "target_bn": 970,
+      "target_bn": 972,
       "status": "pending",
       "note": "Systemically significant"
     },
     {
       "threshold": "10% of M1",
-      "target_bn": 1940,
+      "target_bn": 1944,
       "status": "pending",
       "note": "Parallel monetary system"
     }
