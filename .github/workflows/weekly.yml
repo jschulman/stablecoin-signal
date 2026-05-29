@@ -32,9 +32,10 @@ jobs:
 
       - name: Copy data to docs
         run: |
-          mkdir -p docs/data/regulatory docs/data/composite
+          mkdir -p docs/data/regulatory docs/data/composite docs/data/adoption
           cp data/regulatory/genius_act.json docs/data/regulatory/genius_act.json
           cp data/composite/signal.json docs/data/composite/signal.json
+          cp data/adoption/layers.json docs/data/adoption/layers.json
 
       - name: Commit and push results
         env:

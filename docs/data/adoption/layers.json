@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-02-26",
+    "last_updated": "2026-05-29",
     "source": "Manual curation from news, product announcements, regulatory filings",
     "note": "Edit layer statuses and add events. Push to trigger rebuild."
   },
@@ -71,6 +71,10 @@
     { "date": "2025-10-01", "layer": 1, "event": "JPMorgan announces stablecoin custody pilot for institutional clients", "source": "WSJ", "significance": "high" },
     { "date": "2025-11-15", "layer": 3, "event": "Square enables USDC acceptance at point of sale terminals", "source": "Block Inc press release", "significance": "high" },
     { "date": "2026-01-15", "layer": 1, "event": "FDIC issues proposed rulemaking for bank-issued stablecoins", "source": "Federal Register", "significance": "high" },
-    { "date": "2026-02-10", "layer": 2, "event": "Rippling announces stablecoin payroll beta for US companies", "source": "Rippling blog", "significance": "high" }
+    { "date": "2026-02-10", "layer": 2, "event": "Rippling announces stablecoin payroll beta for US companies", "source": "Rippling blog", "significance": "high" },
+    { "date": "2025-12-17", "layer": 1, "event": "DTCC partners with Digital Asset to tokenize DTC-custodied U.S. Treasury securities on Canton Network (privacy-focused permissioned chain)", "source": "CoinDesk / Winston & Strawn", "significance": "critical" },
+    { "date": "2026-05-19", "layer": 1, "event": "Executive Order 'Integrating Financial Technology Innovation into Regulatory Frameworks' directs federal financial regulators (CFPB, SEC, NCUA, CFTC, FDIC, OCC) and the Federal Reserve to remove fragmented fintech regulations; defines 'fintech firm' to include digital-asset and blockchain-based services; orders a 120-day Fed evaluation of Reserve Bank payment-account access for non-bank digital-asset firms, with transparent application procedures and 90-day determination timelines", "source": "White House Presidential Actions (whitehouse.gov/presidential-actions/2026/05/integrating-financial-technology-innovation-into-regulatory-frameworks)", "significance": "high" },
+    { "date": "2026-05-20", "layer": 1, "event": "Federal Reserve requests public comment on a proposed limited-purpose 'payment account' for clearing and settling payments (no intraday credit, no discount window, no interest, automated overdraft controls), aimed at institutions with a wide range of business models that currently lack direct Fed access; states it would NOT change legal eligibility for accounts or payment services. 60-day comment period; Reserve Banks pausing Tier 3 access decisions pending the policy process", "source": "Federal Reserve Board press release (federalreserve.gov/newsevents/pressreleases/other20260520a.htm)", "significance": "high" },
+    { "date": "2026-05-27", "layer": 1, "event": "DTCC selects Stellar as first public blockchain in multi-chain tokenization strategy; July 2026 pilots, early 2027 rollout for Russell 1000 stocks, ETFs, U.S. Treasuries", "source": "Genfinity / The Defiant", "significance": "critical" }
   ]
 }
