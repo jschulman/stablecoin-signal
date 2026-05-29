@@ -29,10 +29,9 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python collectors/onchain_supply.py
 
-      - name: Copy data to docs
+      - name: Copy all data to docs
         run: |
-          mkdir -p docs/data/onchain
-          cp data/onchain/supply.json docs/data/onchain/supply.json
+          rsync -av --include='*/' --include='*.json' --exclude='*' data/ docs/data/
 
       - name: Commit and push results
         env:

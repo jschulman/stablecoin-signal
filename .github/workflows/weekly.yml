@@ -30,12 +30,9 @@ jobs:
       - name: Run composite signal
         run: python normalizers/composite_signal.py
 
-      - name: Copy data to docs
+      - name: Copy all data to docs
         run: |
-          mkdir -p docs/data/regulatory docs/data/composite docs/data/adoption
-          cp data/regulatory/genius_act.json docs/data/regulatory/genius_act.json
-          cp data/composite/signal.json docs/data/composite/signal.json
-          cp data/adoption/layers.json docs/data/adoption/layers.json
+          rsync -av --include='*/' --include='*.json' --exclude='*' data/ docs/data/
 
       - name: Commit and push results
         env:
