@@ -17,7 +17,7 @@
     "treasury_pct_of_tbills": 2.75,
     "tax_friction": "high",
     "active_wallets_m": 72.0,
-    "genius_act_days_until_effective": 237
+    "genius_act_days_until_effective": 230
   },
   "canary_status": {
     "payroll": "not_triggered",
