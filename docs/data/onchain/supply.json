@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-07",
+    "last_updated": "2026-06-08",
     "source": "DefiLlama Stablecoins API, FRED M1SL series",
     "note": "Supply in USD billions. M1 in USD trillions. Edit to add manual corrections. Push to trigger rebuild."
   },
@@ -214,10 +214,10 @@
     },
     {
       "date": "2026-06",
-      "usdc": 75.5,
+      "usdc": 75.6,
       "usdt": 186.8,
-      "others": 52.2,
-      "total": 314.5,
+      "others": 53.0,
+      "total": 315.4,
       "m1_trillion": 19.53,
       "pct_of_m1": 1.61
     }
