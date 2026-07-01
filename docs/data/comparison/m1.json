@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-07-01",
     "source": "FRED M1SL series (Federal Reserve Economic Data)",
     "series_id": "M1SL",
     "unit": "USD trillions",
@@ -8,10 +8,6 @@
     "note": "M1 includes currency in circulation, demand deposits, and other liquid deposits."
   },
   "observations": [
-    {
-      "date": "2024-05",
-      "value_trillion": 18.03
-    },
     {
       "date": "2024-06",
       "value_trillion": 18.04
@@ -103,6 +99,10 @@
     {
       "date": "2026-04",
       "value_trillion": 19.53
+    },
+    {
+      "date": "2026-05",
+      "value_trillion": 19.75
     }
   ]
 }
