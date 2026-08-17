@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10",
+    "last_updated": "2026-08-17",
     "source": "Congress.gov, Federal Register, OCC.gov, FDIC.gov, Treasury.gov",
     "note": "Edit to update milestone statuses. Push to trigger rebuild."
   },
@@ -35,7 +35,7 @@
       "status": "in_progress",
       "agency": "OCC/FDIC/Fed",
       "detail": "Expected by November 2026 (18 months post-enactment)",
-      "days_remaining": 82
+      "days_remaining": 75
     },
     {
       "milestone": "Effective date of Act",
@@ -43,7 +43,7 @@
       "status": "pending",
       "agency": "All",
       "detail": "18 months post-enactment or 120 days after final regs, whichever is earlier",
-      "days_remaining": 160
+      "days_remaining": 153
     },
     {
       "milestone": "Foreign issuer compatibility determinations",
@@ -66,7 +66,7 @@
       "status": "pending",
       "agency": "States",
       "detail": "1 year post-effective date for state regimes to certify",
-      "days_remaining": 525
+      "days_remaining": 518
     },
     {
       "milestone": "Prohibition on non-approved issuers takes effect",
@@ -74,7 +74,7 @@
       "status": "pending",
       "agency": "All",
       "detail": "3 years post-enactment, only approved issuers may operate",
-      "days_remaining": 707
+      "days_remaining": 700
     }
   ],
   "approved_issuers": [],
@@ -99,5 +99,5 @@
       "next_action": "Expected to issue proposed rule 2026-Q1"
     }
   ],
-  "days_until_effective": 160
+  "days_until_effective": 153
 }
