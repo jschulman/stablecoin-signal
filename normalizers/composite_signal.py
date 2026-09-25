@@ -102,7 +102,7 @@ def compute_days_until_effective(regulatory):
         return None
 
 
-def build_signal():
+def build_signal(as_of=None):
     """Build the composite signal from all data sources."""
     print("Loading data sources...")
 
@@ -114,6 +114,15 @@ def build_signal():
     regulatory = load_json(REGULATORY_PATH)
     treasury = load_json(TREASURY_PATH)
     tax = load_json(TAX_PATH)
+
+    source_dates = {
+        name: payload.get("metadata", {}).get("last_updated")
+        for name, payload in {
+            "supply": supply, "volume": volume, "wallets": wallets,
+            "remittance": remittance, "adoption": adoption, "regulatory": regulatory,
+            "treasury": treasury, "tax": tax,
+        }.items()
+    }
 
     # Extract latest values
     latest_supply = get_latest_entry(supply, "monthly")
@@ -127,12 +136,12 @@ def build_signal():
     print(f"  Layers: {layers_summary}")
 
     # Compute key metrics
-    supply_pct = latest_supply.get("pct_of_m1", 0)
-    commercial_pct = latest_volume.get("commercial_pct_of_ach", 0)
-    remittance_pct = latest_remittance.get("stablecoin_pct", 0)
-    treasury_pct = latest_treasury.get("pct_of_market", 0)
+    supply_pct = latest_supply.get("pct_of_m1")
+    commercial_pct = latest_volume.get("commercial_pct_of_ach")
+    remittance_pct = latest_remittance.get("stablecoin_pct")
+    treasury_pct = latest_treasury.get("pct_of_market")
     tax_friction = tax.get("current_friction", "unknown")
-    active_wallets = latest_wallets.get("monthly_active_m", 0)
+    active_wallets = latest_wallets.get("monthly_active_m")
     days_until = compute_days_until_effective(regulatory)
 
     key_metrics = {
@@ -157,7 +166,10 @@ def build_signal():
     now = datetime.now(timezone.utc)
     signal = {
         "metadata": {
-            "last_updated": now.strftime("%Y-%m-%d"),
+            "last_updated": max((value for value in source_dates.values() if value), default=None),
+            "built_at": as_of or now.strftime("%Y-%m-%d"),
+            "source_dates": source_dates,
+            "freshness_note": "Build time does not refresh observations. Refer to each source date; adoption corrections carry individual review dates.",
             "computed_by": "normalizers/composite_signal.py",
         },
         "layers_summary": layers_summary,

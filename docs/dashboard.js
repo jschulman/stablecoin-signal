@@ -128,6 +128,12 @@
       return;
     }
 
+    var consumerFreshness = $("consumer-freshness");
+    if (consumerFreshness) {
+      var reviewedDates = data.layers.map(function (layer) { return layer.reviewed_at; }).filter(Boolean).sort();
+      consumerFreshness.textContent = "Consumer-facing milestones are separate from backend settlement. Layer assessment: " + ((data.metadata || {}).last_updated || "unknown") + (reviewedDates.length ? "; latest scoped correction: " + reviewedDates[reviewedDates.length - 1] : "") + ". ";
+      consumerFreshness.appendChild(el("a", { href: "#financial-rails", textContent: "View institutional evidence below." }));
+    }
     container.innerHTML = "";
 
     /* Sort layers descending (5 at top, 1 at bottom) */
@@ -161,6 +167,12 @@
         content.appendChild(el("div", { className: "ladder-signal", textContent: layer.key_signal }));
       }
 
+      if (layer.reviewed_at) {
+        content.appendChild(el("div", { className: "ladder-signal", textContent: layer.evidence + " Scoped review: " + layer.reviewed_at + "." }));
+        if (layer.source_url && /^https:\/\//.test(layer.source_url)) {
+          content.appendChild(el("a", { href: layer.source_url, textContent: "Primary source (" + layer.source_date + ")", rel: "noopener" }));
+        }
+      }
       step.appendChild(content);
       container.appendChild(step);
     }
@@ -960,7 +972,8 @@
       { name: "Remittance", data: allData.remittance },
       { name: "Wallets", data: allData.wallets },
       { name: "Treasury", data: allData.reserves },
-      { name: "Regulatory", data: allData.genius }
+      { name: "Regulatory", data: allData.genius },
+      { name: "Consumer layers", data: allData.layers }
     ];
 
     var indicators = el("div", { className: "freshness-indicators" });
@@ -971,7 +984,7 @@
       var loaded = src.data != null;
       var dot = el("span", {
         className: "freshness-dot" + (loaded ? "" : " stale"),
-        textContent: src.name + (loaded ? " loaded" : " pending")
+        textContent: src.name + (loaded ? " source: " + ((src.data.metadata || {}).last_updated || "unknown") : " unavailable")
       });
       indicators.appendChild(dot);
 
@@ -985,7 +998,7 @@
     freshnessEl.appendChild(indicators);
 
     if (updatedEl && latestDate) {
-      updatedEl.textContent = "Last updated: " + latestDate;
+      updatedEl.textContent = "Newest legacy source update: " + latestDate + " · see source and review dates by section";
     }
   }
 

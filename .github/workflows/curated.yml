@@ -1,0 +1,45 @@
+name: Curated Evidence Build
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'normalizers/**'
+      - 'docs/rails.js'
+      - 'tests/**'
+      - 'METHODOLOGY.md'
+      - '.github/workflows/curated.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify evidence contract
+        run: |
+          python -m unittest discover -s tests
+          node tests/rails.test.cjs
+      - name: Build static data
+        run: python normalizers/build_dashboard.py
+      - name: Publish generated data through existing docs branch
+        if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/ docs/data/ docs/METHODOLOGY.md
+          git add -f data/rails/summary.json docs/data/rails/summary.json
+          if ! git diff --staged --quiet; then
+            git commit -m 'chore(data): rebuild curated evidence'
+            git push
+          fi

@@ -112,6 +112,7 @@ a:hover {
 
 /* --- Cards --- */
 .card {
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -540,6 +541,8 @@ a:hover {
 }
 
 .event-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: 0.8125rem;
   color: var(--text-secondary);
   flex: 1;
@@ -855,3 +858,24 @@ a:hover {
     text-decoration: underline;
   }
 }
+
+/* Financial Rails: independent of the consumer ladder and chart library. */
+.rails-intro, .rails-note { color: var(--text-secondary); margin: .7rem 0; }
+.rails-stats, .rails-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1rem; margin: 1rem 0; }
+.rails-stat { padding: 1rem; display: flex; flex-direction: column; }
+.rails-stat strong { font-size: 1.8rem; }
+.rails-stat span { color: var(--text-secondary); }
+.rails-record { padding: 1.2rem; min-width: 0; overflow-wrap: anywhere; }
+.rails-record h3 { font-size: 1.1rem; }
+.rails-stage { color: #93c5fd; margin: .5rem 0; text-transform: capitalize; }
+.rails-facts { display: grid; grid-template-columns: minmax(95px, 1fr) 2.3fr; gap: .65rem 1rem; margin: 1.2rem 0; font-size: .9rem; }
+.rails-facts dt { color: var(--text-secondary); }
+.rails-facts dd { margin: 0; min-width: 0; }
+.rails-coverage, .rails-sources, .rails-implications ul { padding-left: 1.3rem; margin: .8rem 0; }
+.rails-review { font-size: .85rem; color: var(--text-secondary); margin: .7rem 0; }
+.rails-overdue { color: #fbbf24; }
+.rails-implications { border-top: 1px solid var(--border); padding-top: .8rem; margin-top: 1rem; }
+.rails-implications summary { cursor: pointer; font-weight: 600; }
+.rails-implications p, .rails-implications li { font-size: .9rem; }
+@media (max-width: 450px) { .rails-facts { grid-template-columns: 1fr; gap: .2rem; } .rails-facts dd { margin-bottom: .7rem; } }
+.status-unknown { background: rgba(148,163,184,.15); color: var(--text-secondary); }

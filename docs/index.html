@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container">
       <h1 class="site-title">The Stablecoin Signal</h1>
-      <p class="site-subtitle">Tracking stablecoin adoption through the Interchangeability Ladder &mdash; from holding to invisible money</p>
+      <p class="site-subtitle">Tracking consumer stablecoin use and the financial rails underneath money and securities</p>
       <p class="last-updated" id="last-updated">Last updated: loading...</p>
     </div>
   </header>
@@ -23,12 +23,21 @@
     <!-- Section 1: The Interchangeability Ladder (HERO) -->
     <section class="section" id="ladder-section">
       <h2 class="section-title">The Interchangeability Ladder</h2>
+      <p class="rails-intro" id="consumer-freshness">Consumer-facing milestones are assessed separately from backend settlement. Source dates appear after loading. <a href="#financial-rails">View institutional evidence below.</a></p>
       <div class="ladder-container" id="ladder-container">
         <!-- Rendered by JS -->
       </div>
       <div class="canary-panel" id="canary-panel">
         <!-- Rendered by JS -->
       </div>
+    </section>
+
+    <section class="section" id="financial-rails" aria-labelledby="rails-heading">
+      <h2 class="section-title" id="rails-heading">Financial Rails <span class="status-badge status-emerging">pilot</span></h2>
+      <p class="rails-intro">Does blockchain enter ordinary financial operations? Track actual settlement, securities and collateral workflows, even when customers see dollars and familiar accounts.</p>
+      <p class="rails-note">Announcements, pilots and production are separate stages. These selected records are not market adoption rates. Payments, treasury transfers and securities activity are not added together; unknown measurements stay unknown. Potential assurance work is a hypothesis until procurement is documented.</p>
+      <p class="rails-note">A source review checks the evidence, not whether an initiative still operates. Reviews are due every 30 days; original event and source dates stay visible. Consumer adoption and legal or tax equivalence are assessed separately.</p>
+      <div id="rails-evidence" aria-live="polite">Loading sourced evidence…</div>
     </section>
 
     <!-- Section 2: Supply and Scale -->
@@ -239,6 +248,7 @@
     </div>
   </footer>
 
+  <script src="rails.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>

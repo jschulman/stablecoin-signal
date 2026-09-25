@@ -2,7 +2,7 @@
   "metadata": {
     "last_updated": "2026-05-29",
     "source": "Manual curation from news, product announcements, regulatory filings",
-    "note": "Edit layer statuses and add events. Push to trigger rebuild."
+    "note": "Legacy layer assessment remains dated May 29, 2026. Individual reviewed_at fields identify scoped corrections; the Financial Rails pilot separately tracks backend adoption."
   },
   "layers": [
     {
@@ -40,10 +40,13 @@
     {
       "number": 5,
       "name": "Invisible",
-      "status": "not_started",
-      "key_signal": "Abstraction complete",
+      "status": "unknown",
+      "key_signal": "Consumer abstraction unmeasured",
       "threshold": "Consumer surveys show <50% know which currency they used",
-      "evidence": "No evidence of abstraction. Users always know whether they are using stablecoins vs. USD."
+      "evidence": "The consumer-awareness threshold has no cited survey measurement. Separately, Visa reported on December 16, 2025 that US banks had begun USDC settlement with the cardholder experience unchanged. Backend abstraction exists in this scoped example; it does not establish consumer currency, tax or cash equivalence.",
+      "reviewed_at": "2026-09-25",
+      "source_url": "https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21951.html",
+      "source_date": "2025-12-16"
     }
   ],
   "canary": {

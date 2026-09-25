@@ -1,12 +1,12 @@
 # The Stablecoin Signal
 
-Real-time dashboard tracking when US dollars and stablecoins become functionally interchangeable.
+Dashboard tracking consumer stablecoin use and blockchain adoption inside ordinary financial operations.
 
 **Live dashboard:** [jschulman.github.io/stablecoin-signal](https://jschulman.github.io/stablecoin-signal)
 
 ## The Thesis
 
-There is a tipping point when converting between USDC and USD becomes unnecessary. The dashboard tracks the signals indicating how close we are to that moment.
+Consumer stablecoin adoption and backend financial adoption can move independently. The original ladder tracks the former. The Financial Rails pilot tracks sourced payments, treasury, securities, collateral and fund workflows, including operations that leave the customer experience unchanged. Neither view establishes cash, accounting or tax equivalence.
 
 ## The Interchangeability Ladder
 
@@ -16,9 +16,9 @@ There is a tipping point when converting between USDC and USD becomes unnecessar
 | 2 | **Earn** | Emerging | Payroll platforms disburse stablecoins |
 | 3 | **Spend** | Emerging | Merchants accept stablecoins directly |
 | 4 | **Borrow** | Not Started | Banks treat USDC as USD-equivalent collateral |
-| 5 | **Invisible** | Not Started | Apps abstract the difference away |
+| 5 | **Invisible** | Unmeasured | Consumer currency-awareness threshold lacks a cited survey |
 
-Layer 5 is the tipping point. The dashboard tracks how each layer is developing.
+The ladder is a consumer hypothesis, not a gate that institutional adoption must pass. Its legacy assessment remains dated May 29, 2026; the scoped Invisible correction is dated September 25. Backend evidence appears independently at [Financial Rails](https://jschulman.github.io/stablecoin-signal/#financial-rails).
 
 ## What This Tracks
 
@@ -54,10 +54,13 @@ collectors/           Python scripts fetching live data
   regulatory_milestones.py  GENIUS Act status (weekly)
 normalizers/
   composite_signal.py   Layer status + key metrics computation
+  financial_rails.py    Strict evidence validation + deterministic pilot summary
+  build_dashboard.py   Offline validate, generate and copy entry point
 data/                 Curated JSON data files (trigger files)
   onchain/              Supply, volume, wallets
   remittance/           Cross-border comparison
   adoption/             Interchangeability layers + events
+  rails/                Curated financial-operations evidence + generated summary
   regulatory/           GENIUS Act milestones
   treasury/             T-bill reserve holdings
   tax/                  IRS treatment status
@@ -70,14 +73,32 @@ docs/                 Static dashboard (GitHub Pages)
 
 ## How It Updates
 
-**Automated:** GitHub Actions run collectors daily/weekly/monthly.
+**Automated:** GitHub Actions run collectors daily/weekly/monthly and the common dashboard build. Curated data changes run validation and a build on push. Existing branch/docs publication is preserved. These jobs do not research or advance evidence-review dates automatically.
 
 **Manual (trigger files):** Edit any JSON in `data/`, push, and the dashboard rebuilds. Key files:
+- `data/rails/evidence.json` — Add or review dated primary evidence; keep the curated `docs/data/rails/evidence.json` mirror identical for source-only previews
 - `data/adoption/layers.json` — Update layer statuses, add events
 - `data/regulatory/genius_act.json` — Update GENIUS Act milestones
 - `data/tax/status.json` — Update IRS guidance
 - `data/onchain/volume.json` — Add commercial volume estimates
 - `data/remittance/comparison.json` — Add quarterly remittance data
+
+## Financial Rails pilot
+
+The initial records cover Visa settlement for two US banks (December 2025) and DTCC's July 2026 production event. Both are classified as limited production. The sources do not establish sustained usage for these scopes. Cohort volume, market denominators and demonstrated assurance procurement remain unknown. The pilot is selected coverage, not a representative panel or market adoption index.
+
+The schema and conditional evidence requirements are enforced by `normalizers/financial_rails.py` using Python's standard library. No new dependencies are required. Stages include announced, pilot, limited-production, recurring-production, paused and discontinued. Production needs observed execution; recurring production also needs dated repeat evidence. Planned dates never promote records automatically.
+
+```sh
+python3 -m unittest discover -s tests
+node tests/rails.test.cjs
+python3 normalizers/financial_rails.py --validate-only --as-of 2026-09-25
+python3 normalizers/build_dashboard.py --as-of 2026-09-25
+```
+
+The last command refreshes generated data and copies the methodology and public data into `docs/`. Omit `--as-of` to use today's UTC date. Repeating it for the same evidence and date produces the same rails summary. Source-only previews work without generated rails JSON: `docs/rails.js` reads the curated evidence directly and computes review age using the browser's UTC date. The generated summary is ignored locally; the existing automation can commit it as publishing output.
+
+Serve `docs/` over HTTP to preview. Financial Rails does not depend on Chart.js loading. The public summary contract is documented in [METHODOLOGY.md](METHODOLOGY.md#financial-rails-pilot).
 
 ## Design Principles
 

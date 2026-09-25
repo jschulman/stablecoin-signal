@@ -34,12 +34,8 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python collectors/onchain_supply.py
 
-      - name: Run composite signal
-        run: python normalizers/composite_signal.py
-
-      - name: Copy all data to docs
-        run: |
-          rsync -av --include='*/' --include='*.json' --exclude='*' data/ docs/data/
+      - name: Validate and build dashboard data
+        run: python normalizers/build_dashboard.py
 
       - name: Commit and push results
         env:
@@ -47,7 +43,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ docs/data/
+          git add data/ docs/data/ docs/METHODOLOGY.md
+          git add -f data/rails/summary.json docs/data/rails/summary.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

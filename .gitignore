@@ -7,3 +7,7 @@ build/
 .venv/
 data/*/raw/
 .DS_Store
+
+# Rebuilt locally; scheduled publishing may commit its generated artifacts.
+data/rails/summary.json
+docs/data/rails/summary.json
