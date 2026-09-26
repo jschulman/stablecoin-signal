@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "scope": "Curated US financial-operations pilot; not a representative market sample or adoption rate.",
+    "review_cadence_days": 30,
+    "coverage_note": "Two sourced initiatives. Institutional treasury transfers and tokenized fund activity remain unmeasured. Record counts are coverage counts, not market penetration.",
+    "built_at": "2026-09-26",
+    "latest_source_date": "2026-07-15",
+    "oldest_review_date": "2026-09-25",
+    "volume_aggregation": "none: heterogeneous and potentially overlapping workflows"
+  },
+  "summary": {
+    "record_count": 2,
+    "stage_counts": {
+      "announced": 0,
+      "pilot": 0,
+      "limited-production": 2,
+      "recurring-production": 0,
+      "paused": 0,
+      "discontinued": 0
+    },
+    "category_counts": {
+      "payment-settlement": 1,
+      "institutional-treasury": 0,
+      "securities-collateral": 1,
+      "fund-operations": 0
+    },
+    "overdue_reviews": 0,
+    "recurring_records": 0,
+    "unknown_volume_records": 2
+  },
+  "records": [
+    {
+      "id": "dtcc-tokenized-production-event",
+      "event_id": "dtcc-production-2026-07-15",
+      "institutions": [
+        "DTCC",
+        "DTC"
+      ],
+      "rail": "DTCC private Besu network and Canton",
+      "asset_legal_claim": "Tokenized representations of DTC-custodied securities; rights described by DTCC, not an independent legal assessment.",
+      "category": "securities-collateral",
+      "use_cases": [
+        "Securities settlement",
+        "Collateral pledge",
+        "Securities lending",
+        "Treasury/repo DVP",
+        "CCP margin"
+      ],
+      "geography": "United States securities; international institutional participants",
+      "event_date": "2026-07-15",
+      "event_date_precision": "exact",
+      "stage": "limited-production",
+      "stage_evidence": {
+        "production_observed": true,
+        "details": "DTCC reported real transactions across several workflows during a several-hour production event. October 2026 was a planned service launch, not evidence of recurring use.",
+        "source_ids": [
+          "dtcc-2026-07-15"
+        ]
+      },
+      "sources": [
+        {
+          "id": "dtcc-2026-07-15",
+          "title": "DTCC turns tokenization into reality: production trades",
+          "url": "https://www.dtcc.com/press-releases/2026/dtcc-turns-tokenization-into-reality",
+          "published_date": "2026-07-15"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "recurring_evidence": {
+        "status": "unknown",
+        "details": "One event does not establish sustained production activity.",
+        "observation_dates": [],
+        "source_ids": []
+      },
+      "volume": {
+        "value": null,
+        "unit": null,
+        "period": null,
+        "denominator": null,
+        "source_ids": [],
+        "note": "Event notional and eligible-market denominator were not disclosed. DTCC-wide figures are excluded."
+      },
+      "customer_visibility": "Institutional workflows; end-investor experience not established by this release.",
+      "operating_evidence": {
+        "availability": null,
+        "cost_change": null,
+        "prefunding_change": null,
+        "note": "Potential efficiencies were described without measured event-level cost or prefunding outcomes."
+      },
+      "control_implications": [
+        "Hypothesis: reconcile tokenized positions and entitlements to custody records.",
+        "Hypothesis: assess asset conversion, wallet permissions, collateral movement and settlement evidence."
+      ],
+      "procurement_evidence": {
+        "status": "unknown",
+        "details": "No assurance purchase or RSM engagement identified in this source.",
+        "source_ids": []
+      },
+      "next_review_question": "Verify launch status and dated repeat activity; do not promote stage when the planned launch date arrives.",
+      "review_age_days": 1,
+      "review_due": "2026-10-25",
+      "review_status": "current",
+      "source_age_days": 73
+    },
+    {
+      "id": "visa-us-usdc-settlement",
+      "event_id": "visa-us-usdc-2025-12-16",
+      "institutions": [
+        "Visa",
+        "Cross River Bank",
+        "Lead Bank"
+      ],
+      "rail": "Solana / Visa settlement",
+      "asset_legal_claim": "USDC stablecoin; not a bank deposit or a claim of cash or tax equivalence.",
+      "category": "payment-settlement",
+      "use_cases": [
+        "Institutional card-network settlement"
+      ],
+      "geography": "United States",
+      "event_date": "2025-12-16",
+      "event_date_precision": "reported-by",
+      "stage": "limited-production",
+      "stage_evidence": {
+        "production_observed": true,
+        "details": "Visa reported Cross River and Lead Bank had begun USDC settlement. Access remained selective within its pilot.",
+        "source_ids": [
+          "visa-2025-12-16"
+        ]
+      },
+      "sources": [
+        {
+          "id": "visa-2025-12-16",
+          "title": "Visa launches stablecoin settlement in the United States",
+          "url": "https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.21951.html",
+          "published_date": "2025-12-16"
+        }
+      ],
+      "reviewed_at": "2026-09-25",
+      "recurring_evidence": {
+        "status": "unknown",
+        "details": "The release does not quantify repeated settlement for either named US bank. Visa's global annualized figure cannot be assigned to this US cohort.",
+        "observation_dates": [],
+        "source_ids": []
+      },
+      "volume": {
+        "value": null,
+        "unit": null,
+        "period": null,
+        "denominator": null,
+        "source_ids": [],
+        "note": "No US-cohort volume or eligible-market denominator reported."
+      },
+      "customer_visibility": "Consumer card experience unchanged, according to Visa.",
+      "operating_evidence": {
+        "availability": "Seven-day settlement availability reported.",
+        "cost_change": null,
+        "prefunding_change": null,
+        "note": "No measured cost or prefunding reduction for the named banks disclosed."
+      },
+      "control_implications": [
+        "Hypothesis: reconcile token settlement to network obligations and bank books.",
+        "Hypothesis: assess wallet authorization, cutoff, liquidity and third-party controls."
+      ],
+      "procurement_evidence": {
+        "status": "unknown",
+        "details": "No assurance purchase or RSM engagement identified in this source.",
+        "source_ids": []
+      },
+      "next_review_question": "Seek dated US-bank repeat usage, volumes, corridors, and measured operating outcomes.",
+      "review_age_days": 1,
+      "review_due": "2026-10-25",
+      "review_status": "current",
+      "source_age_days": 284
+    }
+  ]
+}

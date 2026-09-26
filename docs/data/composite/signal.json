@@ -1,6 +1,18 @@
 {
   "metadata": {
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-26",
+    "built_at": "2026-09-26",
+    "source_dates": {
+      "supply": "2026-09-26",
+      "volume": "2026-02-26",
+      "wallets": "2026-02-26",
+      "remittance": "2026-02-26",
+      "adoption": "2026-05-29",
+      "regulatory": "2026-09-21",
+      "treasury": "2026-02-26",
+      "tax": "2026-02-26"
+    },
+    "freshness_note": "Build time does not refresh observations. Refer to each source date; adoption corrections carry individual review dates.",
     "computed_by": "normalizers/composite_signal.py"
   },
   "layers_summary": {
@@ -8,7 +20,7 @@
     "earn": "emerging",
     "spend": "emerging",
     "borrow": "not_started",
-    "invisible": "not_started"
+    "invisible": "unknown"
   },
   "key_metrics": {
     "supply_pct_of_m1": 1.57,
