@@ -4,7 +4,7 @@
     "scope": "Curated US financial-operations pilot; not a representative market sample or adoption rate.",
     "review_cadence_days": 30,
     "coverage_note": "Two sourced initiatives. Institutional treasury transfers and tokenized fund activity remain unmeasured. Record counts are coverage counts, not market penetration.",
-    "built_at": "2026-09-28",
+    "built_at": "2026-09-29",
     "latest_source_date": "2026-07-15",
     "oldest_review_date": "2026-09-25",
     "volume_aggregation": "none: heterogeneous and potentially overlapping workflows"
@@ -98,10 +98,10 @@
         "source_ids": []
       },
       "next_review_question": "Verify launch status and dated repeat activity; do not promote stage when the planned launch date arrives.",
-      "review_age_days": 3,
+      "review_age_days": 4,
       "review_due": "2026-10-25",
       "review_status": "current",
-      "source_age_days": 75
+      "source_age_days": 76
     },
     {
       "id": "visa-us-usdc-settlement",
@@ -168,10 +168,10 @@
         "source_ids": []
       },
       "next_review_question": "Seek dated US-bank repeat usage, volumes, corridors, and measured operating outcomes.",
-      "review_age_days": 3,
+      "review_age_days": 4,
       "review_due": "2026-10-25",
       "review_status": "current",
-      "source_age_days": 286
+      "source_age_days": 287
     }
   ]
 }
