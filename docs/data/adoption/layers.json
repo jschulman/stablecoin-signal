@@ -58,7 +58,7 @@
   "secondary_canaries": [
     { "name": "Tax equivalence", "signal": "IRS treats regulated stablecoins as cash equivalents", "status": "not_triggered" },
     { "name": "Stablecoin > Western Union", "signal": "Cross-border remittance displacement proven", "status": "triggered", "date": "2025-Q3" },
-    { "name": "1% of ACH", "signal": "Commercial payment rail competition is real", "status": "triggered", "date": "2024-12" },
+    { "name": "1% of ACH", "signal": "Commercial payment rail competition is real", "status": "watching", "date": "2024-12", "reviewed_at": "2026-10-15", "note": "Re-tested 2026-10-15. Triggered 2024-12 on the curated commercial estimate; the McKinsey x Artemis payment-only measure (~$390B annualized as of Dec 2025, ~$32.5B/month) puts the same categories at ~0.45% of ACH; the curated series shows $120B for that month. Held at watching until the two series reconcile. See onchain/volume.json cross_checks." },
     { "name": "Top-25 bank custody", "signal": "Traditional financial system has absorbed stablecoins", "status": "not_triggered" }
   ],
   "events": [

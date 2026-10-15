@@ -35,7 +35,7 @@
     "payroll": "not_triggered",
     "tax_equivalence": "not_triggered",
     "western_union_surpassed": "triggered",
-    "one_pct_ach": "triggered",
+    "one_pct_ach": "watching",
     "top25_bank_custody": "not_triggered"
   }
 }

@@ -42,7 +42,7 @@ The ladder is a consumer hypothesis, not a gate that institutional adoption must
 **Secondary canaries:**
 - Tax equivalence — IRS treats regulated stablecoins as cash equivalents
 - Stablecoin > Western Union — Cross-border displacement proven (triggered Q3 2025)
-- 1% of ACH — Commercial payment rail competition is real (triggered Dec 2024)
+- 1% of ACH — Commercial payment rail competition is real (watching: triggered Dec 2024 on the curated estimate; held since 2026-10-15 because the McKinsey × Artemis payment-only measure puts it near 0.45%)
 - Top-25 bank custody — Traditional financial system has absorbed stablecoins
 
 ## Architecture

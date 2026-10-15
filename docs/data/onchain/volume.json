@@ -26,9 +26,33 @@
   ],
   "milestones": [
     { "threshold": "0.1% of ACH", "status": "passed", "date": "2023-06", "note": "Measurable but tiny" },
-    { "threshold": "1% of ACH", "status": "passed", "date": "2024-12", "note": "THE SIGNAL. Settlement rail competition begins." },
+    { "threshold": "1% of ACH", "status": "in_progress", "note": "THE SIGNAL. Settlement rail competition begins. Contested since 2026-10-15: the curated series crossed 1% in 2024-12, but the McKinsey x Artemis payment-only measure implies ~0.45% of ACH for 2025-12. See cross_checks." },
     { "threshold": "5% of ACH", "status": "pending", "note": "Banks and payment processors materially impacted" },
     { "threshold": "10% of ACH", "status": "pending", "note": "Parallel payment rail established" }
+  ],
+  "cross_checks": [
+    {
+      "id": "mckinsey-artemis-2025",
+      "source": "McKinsey & Company x Artemis Analytics, \"Stablecoins in payments: What the raw transaction numbers miss\"",
+      "url": "https://www.mckinsey.com/featured-insights/week-in-charts/stablecoins-find-their-niche",
+      "published": "2026-02-18",
+      "reviewed_at": "2026-10-15",
+      "period": "2025-12",
+      "period_note": "McKinsey reports $390B for 2025, computed from activity data as of December 2025 against a $35T annualized gross. It is read here as a December 2025 annualized run rate; if it is instead the full-year total, the 2025 average is the same $32.5B/month and ~0.46% of ACH, so the milestone reading does not change.",
+      "payments_bn_annualized": 390,
+      "payments_bn_monthly": 32.5,
+      "breakdown_bn": {
+        "b2b": 226,
+        "c2c": 77,
+        "c2b": 76,
+        "b2c": 11
+      },
+      "gross_volume_tn_annual": 35,
+      "implied_pct_of_ach": 0.45,
+      "ach_basis": "2025-12 ach_volume_bn in this file ($7.15T/month)",
+      "comparison": "Same included categories as the curated commercial estimate (B2B, P2P, P2M, payroll, remittance). The curated series shows $120B for 2025-12, about 3.7x this measure.",
+      "note": "Payment-only measure that excludes trading, internal transfers, arbitrage and smart-contract loops. Monthly run-rate reported at roughly $30B in early 2026, up from $5B in January 2024."
+    }
   ],
   "filtering_note": "Commercial volume is estimated by excluding known DeFi protocol interactions, exchange-to-exchange transfers, arbitrage activity, and same-entity treasury management. This is a best-effort approximation. See METHODOLOGY.md for full filtering methodology."
 }

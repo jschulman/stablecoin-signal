@@ -336,6 +336,21 @@
 
     var monthly = data.monthly;
     var labels = monthly.map(function (d) { return d.date; });
+    var crossChecks = data.cross_checks || [];
+
+    var section = $("commercial-section");
+    if (section && crossChecks.length && !$("commercial-cross-checks")) {
+      var notes = el("div", { id: "commercial-cross-checks" });
+      crossChecks.forEach(function (cc) {
+        notes.appendChild(el("p", { className: "rails-note" }, [
+          "Cross-check (" + cc.period + "): " + cc.source + " counts ~" + formatBn(cc.payments_bn_annualized) + " a year (annualized)" +
+          " of real stablecoin payments, ~" + formatBn(cc.payments_bn_monthly) + "/month, or ~" +
+          formatPct(cc.implied_pct_of_ach) + " of ACH. " + cc.comparison + " ",
+          el("a", { href: cc.url, target: "_blank", rel: "noopener" }, ["Source"])
+        ]));
+      });
+      section.appendChild(notes);
+    }
 
     makeChart("commercial-chart", {
       type: "bar",
@@ -401,7 +416,21 @@
           tension: 0.3,
           pointRadius: 2,
           pointBackgroundColor: "#3b82f6"
-        }]
+        }].concat(crossChecks.map(function (cc) {
+          return {
+            type: "line",
+            fill: false,
+            label: "Cross-check: " + cc.source.split(",")[0] + " (" + cc.period + ")",
+            data: labels.map(function (l) { return l.indexOf(cc.period) === 0 ? cc.implied_pct_of_ach : null; }),
+            borderColor: "#f97316",
+            backgroundColor: "transparent",
+            borderDash: [6, 3],
+            borderWidth: 2,
+            pointRadius: 3,
+            pointBackgroundColor: "#f97316",
+            spanGaps: true
+          };
+        }))
       },
       options: {
         responsive: true,
@@ -409,7 +438,7 @@
         plugins: {
           tooltip: {
             callbacks: {
-              label: function (ctx) { return formatPct(ctx.parsed.y); }
+              label: function (ctx) { return ctx.dataset.label + ": " + formatPct(ctx.parsed.y); }
             }
           }
         },

@@ -114,9 +114,19 @@ Treasury transfers and excluded smart-contract workflows may be economically mea
 
 Display format:
 ```
-Estimated Commercial Volume: $132B/quarter
+Estimated Commercial Volume: $132B/month
 (filtered from $3,550B gross volume — 3.7% of total)
 ```
+
+The `monthly` and `defi_volume` series in `onchain/volume.json` are monthly values in USD billions; `cross_checks` fields carry their own units in the field name (`_bn_annual`, `_tn_annual`, `_pct_`). ACH runs about $7T a month (~$80T a year).
+
+### Independent Cross-Checks
+
+`onchain/volume.json` carries a `cross_checks` list of independently published payment-only measures. They are compared with the curated estimate, not blended into it.
+
+- **McKinsey × Artemis (published 2026-02-18):** ~$390B of real stablecoin payments in 2025 (B2B $226B, C2C $77B, C2B $76B, B2C $11B), out of ~$35T annualized gross volume, computed from activity data as of December 2025. Read as a December 2025 run rate, that is ~$32.5B a month, or ~0.45% of that month's ACH; the curated series shows $120B for the same month, about 3.7x higher for the same categories. Read as a full-year total, it averages the same $32.5B a month (~0.46% of 2025 ACH) against a curated 2025 average of ~$98B. Either reading sits below 1%. [Source](https://www.mckinsey.com/featured-insights/week-in-charts/stablecoins-find-their-niche).
+
+When a cross-check disagrees with the curated estimate on which side of a milestone the market sits, the milestone and its canary are held at `in_progress` / `watching` until the two reconcile. The 1% of ACH canary has been held this way since 2026-10-15.
 
 ## Stablecoin Supply vs. M1
 
