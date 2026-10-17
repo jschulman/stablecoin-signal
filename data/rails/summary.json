@@ -3,31 +3,31 @@
   "metadata": {
     "scope": "Curated US financial-operations pilot; not a representative market sample or adoption rate.",
     "review_cadence_days": 30,
-    "coverage_note": "Two sourced initiatives. Institutional treasury transfers and tokenized fund activity remain unmeasured. Record counts are coverage counts, not market penetration.",
+    "coverage_note": "Three sourced initiatives. Tokenized fund activity remains unmeasured. Record counts are coverage counts, not market penetration.",
     "built_at": "2026-10-17",
-    "latest_source_date": "2026-07-15",
-    "oldest_review_date": "2026-09-25",
+    "latest_source_date": "2026-10-15",
+    "oldest_review_date": "2026-10-17",
     "volume_aggregation": "none: heterogeneous and potentially overlapping workflows"
   },
   "summary": {
-    "record_count": 2,
+    "record_count": 3,
     "stage_counts": {
       "announced": 0,
       "pilot": 0,
-      "limited-production": 2,
+      "limited-production": 3,
       "recurring-production": 0,
       "paused": 0,
       "discontinued": 0
     },
     "category_counts": {
       "payment-settlement": 1,
-      "institutional-treasury": 0,
+      "institutional-treasury": 1,
       "securities-collateral": 1,
       "fund-operations": 0
     },
     "overdue_reviews": 0,
     "recurring_records": 0,
-    "unknown_volume_records": 2
+    "unknown_volume_records": 3
   },
   "records": [
     {
@@ -66,10 +66,10 @@
           "published_date": "2026-07-15"
         }
       ],
-      "reviewed_at": "2026-09-25",
+      "reviewed_at": "2026-10-17",
       "recurring_evidence": {
         "status": "unknown",
-        "details": "One event does not establish sustained production activity.",
+        "details": "Re-reviewed 2026-10-17. DTCC's current official hub still describes the service launch as expected in 4Q 2026; the July event alone does not establish sustained production activity.",
         "observation_dates": [],
         "source_ids": []
       },
@@ -98,10 +98,80 @@
         "source_ids": []
       },
       "next_review_question": "Verify launch status and dated repeat activity; do not promote stage when the planned launch date arrives.",
-      "review_age_days": 22,
-      "review_due": "2026-10-25",
+      "review_age_days": 0,
+      "review_due": "2026-11-16",
       "review_status": "current",
       "source_age_days": 94
+    },
+    {
+      "id": "visa-direct-inyo-prefunding",
+      "event_id": "visa-direct-inyo-production-2026-10-15",
+      "institutions": [
+        "Visa",
+        "Inyo Global"
+      ],
+      "rail": "Visa Direct / USDC prefunding",
+      "asset_legal_claim": "USDC stablecoin used to prefund eligible cross-border payouts; not a bank deposit or a claim of cash or tax equivalence.",
+      "category": "institutional-treasury",
+      "use_cases": [
+        "Institutional treasury prefunding",
+        "Cross-border payout funding"
+      ],
+      "geography": "Eligible Visa Direct clients and partners; specific availability varies by geography",
+      "event_date": "2026-10-15",
+      "event_date_precision": "exact",
+      "stage": "limited-production",
+      "stage_evidence": {
+        "production_observed": true,
+        "details": "Visa reported that Inyo Global became the first enabler to bring Visa Direct stablecoin prefunding into commercial production for eligible clients and partners.",
+        "source_ids": [
+          "visa-2026-10-15"
+        ]
+      },
+      "sources": [
+        {
+          "id": "visa-2026-10-15",
+          "title": "Visa Direct launches stablecoin-powered money movement as pilots move to production",
+          "url": "https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22851.html",
+          "published_date": "2026-10-15"
+        }
+      ],
+      "reviewed_at": "2026-10-17",
+      "recurring_evidence": {
+        "status": "unknown",
+        "details": "The source describes commercial production and day-to-day operations but supplies only one dated observation, so repeat activity is not yet documented under this methodology.",
+        "observation_dates": [],
+        "source_ids": []
+      },
+      "volume": {
+        "value": null,
+        "unit": null,
+        "period": null,
+        "denominator": null,
+        "source_ids": [],
+        "note": "No Inyo-specific payout or prefunding volume, client count, or eligible-market denominator reported."
+      },
+      "customer_visibility": "Businesses can use the same Inyo APIs they already use; the recipient experience is not established by this source.",
+      "operating_evidence": {
+        "availability": "Near-real-time USDC prefunding and around-the-clock funding are reported for eligible clients.",
+        "cost_change": null,
+        "prefunding_change": null,
+        "note": "The source describes an alternative to traditional funding windows but provides no measured liquidity, cost, or prefunding reduction."
+      },
+      "control_implications": [
+        "Hypothesis: reconcile USDC prefunding to payout obligations and treasury books.",
+        "Hypothesis: assess wallet authorization, sanctions controls, liquidity cutoffs and processor dependencies."
+      ],
+      "procurement_evidence": {
+        "status": "unknown",
+        "details": "No assurance purchase or RSM engagement identified in this source.",
+        "source_ids": []
+      },
+      "next_review_question": "Seek a second dated production observation, Inyo-specific volume, eligible geographies, and measured liquidity or funding-window outcomes.",
+      "review_age_days": 0,
+      "review_due": "2026-11-16",
+      "review_status": "current",
+      "source_age_days": 2
     },
     {
       "id": "visa-us-usdc-settlement",
@@ -136,10 +206,10 @@
           "published_date": "2025-12-16"
         }
       ],
-      "reviewed_at": "2026-09-25",
+      "reviewed_at": "2026-10-17",
       "recurring_evidence": {
         "status": "unknown",
-        "details": "The release does not quantify repeated settlement for either named US bank. Visa's global annualized figure cannot be assigned to this US cohort.",
+        "details": "Re-reviewed 2026-10-17. Visa has since reported broader global pilot growth, but no source provides two dated observations or volumes for either named US bank. Global annualized figures cannot be assigned to this US cohort.",
         "observation_dates": [],
         "source_ids": []
       },
@@ -168,8 +238,8 @@
         "source_ids": []
       },
       "next_review_question": "Seek dated US-bank repeat usage, volumes, corridors, and measured operating outcomes.",
-      "review_age_days": 22,
-      "review_due": "2026-10-25",
+      "review_age_days": 0,
+      "review_due": "2026-11-16",
       "review_status": "current",
       "source_age_days": 305
     }
