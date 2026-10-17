@@ -85,7 +85,7 @@ docs/                 Static dashboard (GitHub Pages)
 
 ## Financial Rails pilot
 
-The initial records cover Visa settlement for two US banks (December 2025) and DTCC's July 2026 production event. Both are classified as limited production. The sources do not establish sustained usage for these scopes. Cohort volume, market denominators and demonstrated assurance procurement remain unknown. The pilot is selected coverage, not a representative panel or market adoption index.
+The records cover Visa settlement for two US banks (December 2025), DTCC's July 2026 production event, and Visa Direct stablecoin prefunding in commercial production with Inyo Global (October 2026). All three are classified as limited production. The sources do not yet provide the two dated observations required for recurring production. Cohort volume, market denominators and demonstrated assurance procurement remain unknown. The pilot is selected coverage, not a representative panel or market adoption index.
 
 The schema and conditional evidence requirements are enforced by `normalizers/financial_rails.py` using Python's standard library. No new dependencies are required. Stages include announced, pilot, limited-production, recurring-production, paused and discontinued. Production needs observed execution; recurring production also needs dated repeat evidence. Planned dates never promote records automatically.
 

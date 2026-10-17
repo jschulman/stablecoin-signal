@@ -11,12 +11,12 @@ ROOT = Path(__file__).resolve().parents[1]
 class FinancialRailsTest(unittest.TestCase):
     def setUp(self):
         self.data = json.loads((ROOT / 'data/rails/evidence.json').read_text())
-        self.today = date(2026, 9, 25)
+        self.today = date(2026, 10, 17)
 
     def test_curated_mirror_and_conservative_stages(self):
         self.assertEqual(self.data, json.loads((ROOT / 'docs/data/rails/evidence.json').read_text()))
         result = build_summary(self.data, self.today)
-        self.assertEqual(result['summary']['stage_counts']['limited-production'], 2)
+        self.assertEqual(result['summary']['stage_counts']['limited-production'], 3)
         self.assertEqual(result['summary']['recurring_records'], 0)
         self.assertNotIn('total_volume', result['summary'])
 
@@ -25,7 +25,8 @@ class FinancialRailsTest(unittest.TestCase):
         record['stage'] = 'announced'
         record['stage_evidence']['production_observed'] = False
         result = build_summary(self.data, date(2027, 10, 1))
-        self.assertEqual(result['records'][1]['stage'], 'announced')
+        changed = next(r for r in result['records'] if r['id'] == record['id'])
+        self.assertEqual(changed['stage'], 'announced')
 
     def test_invalid_production_claim(self):
         self.data['records'][0]['stage_evidence']['production_observed'] = False
@@ -47,8 +48,9 @@ class FinancialRailsTest(unittest.TestCase):
         record = self.data['records'][0]
         record['volume'].update(value=0, unit='USD', period='2025-12-16', source_ids=['visa-2025-12-16'])
         result = build_summary(self.data, self.today)
-        self.assertEqual(result['summary']['unknown_volume_records'], 1)
-        self.assertEqual(result['records'][1]['volume']['value'], 0)
+        self.assertEqual(result['summary']['unknown_volume_records'], 2)
+        changed = next(r for r in result['records'] if r['id'] == record['id'])
+        self.assertEqual(changed['volume']['value'], 0)
 
     def test_null_is_explicit_and_bool_is_not_volume(self):
         del self.data['records'][0]['volume']['value']
@@ -60,13 +62,14 @@ class FinancialRailsTest(unittest.TestCase):
             validate(self.data, self.today)
 
     def test_review_expiry_does_not_refresh_source(self):
-        result = build_summary(self.data, date(2026, 10, 26))
-        self.assertEqual(result['summary']['overdue_reviews'], 2)
-        self.assertEqual(result['metadata']['built_at'], '2026-10-26')
-        self.assertEqual(result['metadata']['latest_source_date'], '2026-07-15')
-        self.assertEqual(result['records'][1]['reviewed_at'], '2026-09-25')
-        self.assertGreater(result['records'][1]['source_age_days'], 300)
-        boundary = build_summary(self.data, date(2026, 10, 25))
+        result = build_summary(self.data, date(2026, 11, 17))
+        self.assertEqual(result['summary']['overdue_reviews'], 3)
+        self.assertEqual(result['metadata']['built_at'], '2026-11-17')
+        self.assertEqual(result['metadata']['latest_source_date'], '2026-10-15')
+        visa = next(r for r in result['records'] if r['id'] == 'visa-us-usdc-settlement')
+        self.assertEqual(visa['reviewed_at'], '2026-10-17')
+        self.assertGreater(visa['source_age_days'], 300)
+        boundary = build_summary(self.data, date(2026, 11, 16))
         self.assertEqual(boundary['summary']['overdue_reviews'], 0)
 
     def test_duplicate_event_rejected_across_categories(self):
@@ -77,7 +80,7 @@ class FinancialRailsTest(unittest.TestCase):
             validate(self.data, self.today)
 
     def test_schema_rejects_invalid_dates_sources_and_enums(self):
-        changes = [('stage', 'mainstream'), ('reviewed_at', '2026-10-01'), ('event_date', 'yesterday')]
+        changes = [('stage', 'mainstream'), ('reviewed_at', '2026-10-18'), ('event_date', 'yesterday')]
         for key, value in changes:
             with self.subTest(key=key):
                 data = copy.deepcopy(self.data)

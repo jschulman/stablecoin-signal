@@ -32,7 +32,7 @@ Layer statuses are updated manually as events occur. The `data/adoption/layers.j
 
 ### Scope and evidence unit
 
-This curated US-focused pilot tests whether ordinary financial operations use blockchain even when end users see familiar accounts. It covers payment settlement, institutional treasury transfers, securities/collateral workflows and tokenized fund operations as separate categories. The initial two records do not measure the whole market, and no records in a category means unmeasured coverage, not zero adoption.
+This curated US-focused pilot tests whether ordinary financial operations use blockchain even when end users see familiar accounts. It covers payment settlement, institutional treasury transfers, securities/collateral workflows and tokenized fund operations as separate categories. The curated records do not measure the whole market, and no records in a category means unmeasured coverage, not zero adoption.
 
 One record represents a tracked initiative's current evidenced stage. Update its evidence and sources when new events change that stage. Each event has a unique `event_id`; the same multi-workflow event cannot appear twice to inflate activity. A record may list multiple use cases, but has one primary category. There is no cross-category volume total, consumer/backend composite score or market-share calculation. Issuer supply, securities outstanding, gross on-chain transfers, annualized run rates and actual-period settlement flows are different measures and cannot be substituted for each other.
 
