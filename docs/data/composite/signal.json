@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25",
-    "built_at": "2026-10-25",
+    "last_updated": "2026-10-26",
+    "built_at": "2026-10-26",
     "source_dates": {
       "supply": "2026-10-25",
       "volume": "2026-02-26",
       "wallets": "2026-02-26",
       "remittance": "2026-02-26",
       "adoption": "2026-05-29",
-      "regulatory": "2026-10-19",
+      "regulatory": "2026-10-26",
       "treasury": "2026-02-26",
       "tax": "2026-02-26"
     },
@@ -29,7 +29,7 @@
     "treasury_pct_of_tbills": 2.75,
     "tax_friction": "high",
     "active_wallets_m": 72.0,
-    "genius_act_days_until_effective": 90
+    "genius_act_days_until_effective": 83
   },
   "canary_status": {
     "payroll": "not_triggered",
