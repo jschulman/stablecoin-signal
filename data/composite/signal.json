@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "last_updated": "2026-11-09",
-    "built_at": "2026-11-09",
+    "last_updated": "2026-11-10",
+    "built_at": "2026-11-10",
     "source_dates": {
-      "supply": "2026-11-09",
+      "supply": "2026-11-10",
       "volume": "2026-02-26",
       "wallets": "2026-02-26",
       "remittance": "2026-02-26",
@@ -23,7 +23,7 @@
     "invisible": "unknown"
   },
   "key_metrics": {
-    "supply_pct_of_m1": 1.47,
+    "supply_pct_of_m1": 1.46,
     "commercial_pct_of_ach": 1.83,
     "remittance_pct_of_outbound": 14.4,
     "treasury_pct_of_tbills": 2.75,
